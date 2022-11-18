@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/remont/static/css/main.073c9b0a.css",
+    "main.js": "/remont/static/js/main.51a7c9fc.js",
+    "index.html": "/remont/index.html",
+    "main.073c9b0a.css.map": "/remont/static/css/main.073c9b0a.css.map",
+    "main.51a7c9fc.js.map": "/remont/static/js/main.51a7c9fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.51a7c9fc.js"
+  ]
+}
