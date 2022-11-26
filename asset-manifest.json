@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/remont/static/css/main.3605733b.css",
-    "main.js": "/remont/static/js/main.8479ec25.js",
+    "main.css": "/remont/static/css/main.8f421b2e.css",
+    "main.js": "/remont/static/js/main.7cdc1562.js",
     "index.html": "/remont/index.html",
-    "main.3605733b.css.map": "/remont/static/css/main.3605733b.css.map",
-    "main.8479ec25.js.map": "/remont/static/js/main.8479ec25.js.map"
+    "main.8f421b2e.css.map": "/remont/static/css/main.8f421b2e.css.map",
+    "main.7cdc1562.js.map": "/remont/static/js/main.7cdc1562.js.map"
   },
   "entrypoints": [
-    "static/css/main.3605733b.css",
-    "static/js/main.8479ec25.js"
+    "static/css/main.8f421b2e.css",
+    "static/js/main.7cdc1562.js"
   ]
 }
