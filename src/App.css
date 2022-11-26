@@ -1,5 +1,10 @@
+body {
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  /* width: 100vw; */
 }
 
 .App-logo {
@@ -26,6 +31,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.main_list_item {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_layout {
+  min-height: 100vh;
+}
+
+.social_navigation {
+  font-size: 1.4rem;
+  line-height: 7vh;
+}
+
+span.ant-layout-sider-zero-width-trigger {
 }
 
 @keyframes App-logo-spin {

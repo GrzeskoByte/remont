@@ -1,25 +1,33 @@
+import { Col, Input, Row } from "antd";
+import React from "react";
 import "./App.css";
-import { NativeBaseProvider, Stack, Center, VStack } from "native-base";
+import ListOfProducts from "./Components/MainScreen/ListOfProducts";
 
-import Header from "./Components/Header/Header";
-import FoundedItemCard from "./Components/Header/Reusable/FoundedItemCard";
+import MainLayout from "./Layout/MainLayout";
+
+const { Search } = Input;
 
 function App() {
   return (
-    <NativeBaseProvider>
-      <Stack mb="2.5" mt="1.5" direction="column" space={3}>
-        <Center>
-          <Header />
-          <VStack flex={1}>
-            <Center>
-              <FoundedItemCard />
-              <FoundedItemCard />
-              <FoundedItemCard />
-            </Center>
-          </VStack>
-        </Center>
-      </Stack>
-    </NativeBaseProvider>
+    <MainLayout>
+      <Col Space={24}>
+        <Row justify="center">
+          <Search
+            placeholder="input search text"
+            onSearch={() => console.log("click")}
+            size={"large"}
+            style={{
+              width: "50vw",
+              minWidth: 310,
+              marginTop: 16,
+            }}
+          />
+        </Row>
+        <Row justify="center" align="center">
+          <ListOfProducts />
+        </Row>
+      </Col>
+    </MainLayout>
   );
 }
 
