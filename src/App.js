@@ -1,9 +1,15 @@
-import { Col, ConfigProvider, Row, theme } from "antd";
 import React from "react";
 
-import "./App.css";
-import ListOfProducts from "./Components/MainScreen/ListOfProducts";
+import { Col, ConfigProvider, Row, theme } from "antd";
 
+import "./App.css";
+import "./Components/MainScreen/card.css"
+import "./Components/Filters/filters.css"
+import "./Layout/layout.css"
+
+
+import ListOfProducts from "./Components/MainScreen/ListOfProducts";
+import Filters from "./Components/Filters/Filters";
 import MainLayout from "./Layout/MainLayout";
 
 function App() {
@@ -26,13 +32,8 @@ function App() {
       }}
     >
       <MainLayout>
-        <Row>
-          <Col Space={24}>
-            <Row justify="center" align="center">
-              <ListOfProducts />
-            </Row>
-          </Col>
-        </Row>
+        <Filters/>
+        <ListOfProducts />
       </MainLayout>
     </ConfigProvider>
   );

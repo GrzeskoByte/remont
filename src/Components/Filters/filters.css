@@ -1,0 +1,17 @@
+.filters_container{
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100vh;
+ z-index: 100;
+}
+
+.filters_menu{
+ height: 100vh;
+}
+
+.filters_collapse_btn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
