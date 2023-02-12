@@ -30,9 +30,15 @@
 
   .main_header{
     flex-direction: column;
-    height: 477px !important;
+    height: 550px !important;
     width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+  
   }
+  
 
   .main_header h2{
     margin: 0 0 5px 0 ;

@@ -11,6 +11,7 @@ import "./Layout/layout.css"
 import ListOfProducts from "./Components/MainScreen/ListOfProducts";
 import Filters from "./Components/Filters/Filters";
 import MainLayout from "./Layout/MainLayout";
+import ProductFilter from "./Components/Filters/ProductFilters"
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       }}
     >
       <MainLayout>
-        <Filters/>
+        {/* <Filters/> */}
+        <ProductFilter/>
         <ListOfProducts />
       </MainLayout>
     </ConfigProvider>

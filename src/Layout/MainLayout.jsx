@@ -1,11 +1,8 @@
-import {
-  
-  TwitterOutlined,
-  InstagramOutlined,
-  RedditOutlined
-} from "@ant-design/icons";
-import { Input, Layout, Menu, theme, Typography } from "antd";
+import { Input, Layout, theme, Typography } from "antd";
 import React, { useState } from "react";
+
+import headerBackground from "./bgc_main.jpg"
+
 const { Search } = Input;
 
 const { Title } = Typography;
@@ -21,7 +18,7 @@ const MainLayout = ({ children }) => {
   return (
     <Layout>
 
-      <Header className="main_header center">
+      <Header className="main_header center" style={{background: `url(${headerBackground})`}}>
         <h2>Świat remontu</h2>
         <Search
           placeholder="Wyszukaj..."

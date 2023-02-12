@@ -1,13 +1,7 @@
-import React ,{ useState } from 'react';
+import React, { useState } from 'react';
 
 import {
-  AppstoreOutlined,
-  ContainerOutlined,
-  MenuFoldOutlined,
-  PieChartOutlined,
-  DesktopOutlined ,
-  MenuUnfoldOutlined,
-
+  ContainerOutlined, DesktopOutlined, MenuFoldOutlined, MenuUnfoldOutlined, PieChartOutlined
 } from '@ant-design/icons';
 
 import { Button, Menu } from 'antd';
