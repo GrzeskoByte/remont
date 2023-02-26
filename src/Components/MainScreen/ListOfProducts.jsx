@@ -1,7 +1,4 @@
-import { Card, List,Avatar ,Button,theme, Rate,Badge,Tag} from 'antd';
-import {
-  SettingOutlined,EditOutlined,EllipsisOutlined
-} from "@ant-design/icons";
+import { Button, Card, Col, Row, theme, Typography ,Pagination } from 'antd';
 
 
 const data = [
@@ -37,31 +34,36 @@ const data = [
 ];
 const { Meta } = Card;
 
+const { Title,Paragraph,Text } = Typography;
+
 const { useToken } = theme;
 
 
 const ListOfProducts = () => {
   const { token } = useToken();
 
+  const onShowSizeChange = (current, pageSize) => {
+    console.log(current, pageSize);
+  };
 
   return(
-  <List
-    grid={{
-      gutter: 16,
-      xs: 1,
-      sm: 1,
-      md: 1,
-      lg: 1,
-      xl: 1,
-      xxl: 1,
-    }}
-    dataSource={data}
-    renderItem={(item) => (
-      <List.Item className='center'>
-        <ProductCard title ={item.title} imageUrl={"https://nowa-system.pl/wp-content/uploads/2019/12/hurtownia-budowlana-szczecin.jpg"} price={item.price}/>
-      </List.Item>
-    )}
-  />
+    <div className='listOfProductsContainer'>
+      <Row gutter={[16, 16]} className="center">
+        {data.map(item => (
+          <Col key={item.id} span={24} sm={24} md={24} lg={12} xl={12} className="center">
+          <ProductCard title={item.title} price={item.price} imageUrl="https://th.bing.com/th/id/R.3c4d711e163a3cac253d2613328bb25c?rik=55P0ubghzh%2fG6g&riu=http%3a%2f%2fkleberg.pl%2fwp-content%2fuploads%2f2017%2f09%2fmaterialy-budowlane-5.jpg&ehk=f4KBCg2cw61w98tRJdtlDkaLwWuKAm7jwq%2frjMcE8y4%3d&risl=&pid=ImgRaw&r=0"/>
+          </Col>
+        ))}
+      </Row>
+
+      <Pagination
+        showSizeChanger
+        onShowSizeChange={onShowSizeChange}
+        defaultCurrent={3}
+        total={500}
+        className="main_pagination"
+      />
+    </div>
 )};
 
 
@@ -69,31 +71,29 @@ const ProductCard = (props) => {
   const { token } = useToken();
 
   const { title, imageUrl, price } = props;
+  
   return (
-  <Badge.Ribbon text="Provided by ETC" color={token.colorTextLabel}>
-    <div className="product-card">
-      <img src={imageUrl} alt={title} />
-                
-      <div className='card_metas'>
-    
-      <h3>{title}</h3>
-      <div className='tags'>
-        {<Tag color="orange">orange</Tag>} { <Tag color="red">orange</Tag>} 
-      </div>
-      <div className='description'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, perspiciatis placeat labore voluptas consequatur dignissimos voluptate sapiente assumenda fugit provident.
-      </div>
-
-      <footer >
-        <Rate disabled defaultValue={2} />
-        <div className="price">Od: {price}zł</div>
-        <Button type="primary">Przejrzyj</Button>
-      </footer>
-    </div> 
-
-     
-    </div>
-  </Badge.Ribbon>
+    <Card
+      style={{
+        width: 300,
+      }}
+      cover={
+        <img
+          alt="example"
+          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+        />
+      }
+      actions={[
+        <Button type='primary'> Więcej</Button>,
+        <>Allegro c.o</>,
+        <>15,55 zł</>
+      ]}
+    >
+    <Meta
+      title="Card title"
+      description="This is the description"
+    />
+  </Card>
   );
 }
 export default ListOfProducts;

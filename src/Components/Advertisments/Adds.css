@@ -1,0 +1,11 @@
+.adds_carousel{
+    height: 40vh;
+    margin: 0 0 50px;
+}
+.adds_carousel div h3{
+    height: 40vh;
+    color: #fff;
+    line-height: 160px;
+    text-align: center;
+    background: #364d79;
+}

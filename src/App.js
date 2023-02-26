@@ -1,17 +1,16 @@
 import React from "react";
 
-import { Col, ConfigProvider, Row, theme } from "antd";
+import { ConfigProvider, theme } from "antd";
 
 import "./App.css";
-import "./Components/MainScreen/card.css"
-import "./Components/Filters/filters.css"
-import "./Layout/layout.css"
+import "./Components/MainScreen/card.css";
+import "./Layout/layout.css";
+import "./Components/Advertisments/Adds.css"
 
 
 import ListOfProducts from "./Components/MainScreen/ListOfProducts";
-import Filters from "./Components/Filters/Filters";
 import MainLayout from "./Layout/MainLayout";
-import ProductFilter from "./Components/Filters/ProductFilters"
+import Adds from "./Components/Advertisments/Adds"
 
 function App() {
   return (
@@ -24,6 +23,7 @@ function App() {
           colorTextLabel: "#ffa940",
           colorSider: "#fafafa",
           algorithm: theme.compactAlgorithm,
+          iconSize: "20px"
         },
         components: {
           Radio: {
@@ -33,8 +33,7 @@ function App() {
       }}
     >
       <MainLayout>
-        {/* <Filters/> */}
-        <ProductFilter/>
+        <Adds/>
         <ListOfProducts />
       </MainLayout>
     </ConfigProvider>

@@ -7,25 +7,11 @@
   
   .main_layout {
     min-height: 100vh;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .main_nav {
-    width: 100%;
-    height: 5vh;
-    border-bottom: 0px !important;
-  }
-  
-  .searchBar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-
+    align-items: center; */
+    width: 100vw !important;
   }
 
   .main_header{
@@ -45,4 +31,68 @@
     letter-spacing: 1px;
     font-size: 44px;
     color: white;
+  }
+
+  .searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40vw ;
+  }
+
+  .layout_menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+  }
+  .ant-menu-item-selected::after{
+    border-bottom-width: 0px !important;
+    border-bottom-color: transparent !important;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .layout_sider{
+    margin-top: 1vh;
+    padding: 1px 15px 20px;
+    min-width: fit-content !important;
+    max-width: none !important;
+    height: fit-content;
+    flex: 0 !important;
+    overflow: auto;  
+    overflow-x: hidden;  
+  }
+
+  .layout_sider_2{
+    margin-top: 1vh;
+    min-width: 20% !important;
+    max-width: 30% !important;
+    flex: 0 !important;
+    overflow: auto;  
+    overflow-x: hidden;
+    height: fit-content;  
+  }
+
+  .layout_sider h4{
+    text-align: left;
+  }
+
+  .filters_input{
+    width:80%;
+  }
+
+  .filters_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5px 0 25px 0;
   }
