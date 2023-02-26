@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/remont/static/css/main.d2fd1c57.css",
-    "main.js": "/remont/static/js/main.5d27ba2a.js",
+    "main.css": "/remont/static/css/main.c0d691b8.css",
+    "main.js": "/remont/static/js/main.e149ec2c.js",
     "index.html": "/remont/index.html"
   },
   "entrypoints": [
-    "static/css/main.d2fd1c57.css",
-    "static/js/main.5d27ba2a.js"
+    "static/css/main.c0d691b8.css",
+    "static/js/main.e149ec2c.js"
   ]
 }
